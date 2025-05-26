@@ -5,6 +5,7 @@ body {
     color: #333; /* Default text color */
     padding-top: 80px; /* Add padding to the top of the body equal to the header height */
     overflow-x: hidden; /* Prevent horizontal scroll */
+    word-wrap: break-word; /* Prevent long words from causing overflow */
 }
 
 .container {
@@ -83,8 +84,120 @@ nav ul li a:hover {
 }
 
 /* Sections */
-#hero, #about, #problems-solutions, #features, #how-it-works, #audience, #contact, #cta {
-     padding: 80px 0; /* Increased padding for sections, include cta */
+#hero, #about, #problems-solutions, #features, #how-it-works, #audience, #contact, #cta, #testimonials {
+     padding: 80px 0; /* Increased padding for sections, include cta and testimonials */
+}
+
+#about {
+    background: url('images/grayscale_photography_of_ school_desk_and_board.jpg') no-repeat center center/cover;
+    color: white;
+    position: relative;
+}
+
+/* Add a semi-transparent overlay to the about background */
+#about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 1;
+}
+
+#about .container {
+    position: relative;
+    z-index: 2;
+}
+
+#problems-solutions {
+    background: url('images/kids_inside_room_listening_to_maria_and nuns.jpg') no-repeat center center/cover; /* Background image */
+    color: white; /* White text for readability */
+    position: relative;
+}
+
+#problems-solutions::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Darker overlay for contrast */
+    z-index: 1;
+}
+
+#problems-solutions .container {
+    position: relative;
+    z-index: 2;
+}
+
+#contact {
+     background: url('images/dark_mode_background.png') no-repeat center center/cover; /* Background image */
+     color: white; /* White text for readability */
+     position: relative;
+}
+
+#contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Even darker overlay for contact info */
+    z-index: 1;
+}
+
+#contact .container {
+    position: relative;
+    z-index: 2;
+}
+
+#cta {
+    background: url('images/long_lighter_dark_mode_background.png') no-repeat center center/cover; /* Background image */
+    color: white; /* White text for readability */
+    text-align: center; /* Center content */
+    position: relative;
+}
+
+#cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    z-index: 1;
+}
+
+#cta .container {
+    position: relative;
+    z-index: 2;
+}
+
+#features {
+    background: url('images/lighter_dark_mode_background.png') no-repeat center center/cover; /* Background image */
+    color: white; /* White text for readability */
+    position: relative;
+}
+
+#features::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    z-index: 1;
+}
+
+#features .container {
+    position: relative;
+    z-index: 2;
 }
 
 #hero {
@@ -173,112 +286,7 @@ nav ul li a:hover {
 }
 
 /* Background for alternate sections */
-#problems-solutions {
-    background: url('images/kids_inside_room_listening_to_maria_and nuns.jpg') no-repeat center center/cover; /* Background image */
-    color: white; /* White text for readability */
-    position: relative;
-}
-
-#problems-solutions::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Darker overlay for contrast */
-    z-index: 1;
-}
-
-#problems-solutions .container {
-    position: relative;
-    z-index: 2;
-}
-
-#contact {
-     background: url('images/dark_mode_background.png') no-repeat center center/cover; /* Background image */
-     color: white; /* White text for readability */
-     position: relative;
-}
-
-#contact::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Even darker overlay for contact info */
-    z-index: 1;
-}
-
-#contact .container {
-    position: relative;
-    z-index: 2;
-}
-
-#cta {
-    background: url('images/long_lighter_dark_mode_background.png') no-repeat center center/cover; /* Background image */
-    color: white; /* White text for readability */
-    text-align: center; /* Center content */
-    position: relative;
-}
-
-#cta::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
-    z-index: 1;
-}
-
-#cta .container {
-    position: relative;
-    z-index: 2;
-}
-
-#cta h3 {
-     color: white; /* White heading */
-}
-
-#cta .section-intro {
-     color: #eee; /* Lighter grey for intro text */
-}
-
-#features {
-    background: url('images/lighter_dark_mode_background.png') no-repeat center center/cover; /* Background image */
-    color: white; /* White text for readability */
-    position: relative;
-}
-
-#features::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
-    z-index: 1;
-}
-
-#features .container {
-    position: relative;
-    z-index: 2;
-}
-
-#features h3 {
-    color: white; /* White heading */
-}
-
-#features .section-intro {
-     color: #eee; /* Lighter grey for intro text */
-}
-
-/* Background for alternate sections */
+/* Removed background from problems-solutions, features, and contact as they now have image backgrounds */
 #audience, #how-it-works, #testimonials {
     background: #f8f8f8; /* Apply light background to testimonial section */
 }
@@ -314,20 +322,6 @@ nav ul li a:hover {
     color: #555; /* Set dark color for paragraph text in grid items */
 }
 
-.audience-item img {
-    max-width: 100%; /* Make images responsive within the grid item */
-    height: auto;
-    border-radius: 8px; /* Rounded corners for images */
-    margin-bottom: 20px; /* Adjusted margin */
-}
-
-.step-icon {
-    font-size: 48px; /* Larger step icon size */
-    color: #009da4; /* Brand color for the icon */
-    margin-bottom: 20px; /* Increased space below the icon */
-    font-weight: normal; /* Font Awesome icons handle their own weight */
-}
-
 .item-img {
     max-width: 100px; /* Adjust size as needed */
     height: auto;
@@ -336,6 +330,20 @@ nav ul li a:hover {
     display: block; /* Ensure it takes its own line */
     margin-left: auto; /* Center the image if it's smaller than the container */
     margin-right: auto;
+}
+
+.feature-icon {
+    font-size: 48px; /* Size of the feature icon */
+    color: #009da4; /* Brand color for the icon */
+    margin-bottom: 15px; /* Space below the icon */
+    filter: brightness(1.5); /* Make icon brighter on dark background */
+}
+
+.step-icon {
+    font-size: 48px; /* Larger step icon size */
+    color: #009da4; /* Brand color for the icon */
+    margin-bottom: 20px; /* Increased space below the icon */
+    font-weight: normal; /* Font Awesome icons handle their own weight */
 }
 
 /* Contact Section */
@@ -360,27 +368,6 @@ nav ul li a:hover {
 #contact ul li a:hover {
     text-decoration: underline;
     color: #eeeeee; /* Slightly lighter white on hover */
-}
-
-/* --- Animations --- */
-.animate-on-scroll {
-    opacity: 0;
-    transform: translateY(20px); /* Start slightly below final position */
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Smooth transition */
-}
-
-.animate-on-scroll.revealed {
-    opacity: 1;
-    transform: translateY(0); /* Move to final position */
-}
-
-/* Add a slight delay to grid items for staggered effect */
-.solution-item.animate-on-scroll,
-.feature-item.animate-on-scroll,
-.audience-item.animate-on-scroll,
-.step-item.animate-on-scroll,
-.testimonial-item.animate-on-scroll /* Apply animation to testimonial items */ {
-    transition-delay: var(--animation-delay, 0s);
 }
 
 /* Footer */
@@ -414,6 +401,27 @@ footer {
     font-weight: bold;
     color: #333;
     font-size: 17px;
+}
+
+/* --- Animations --- */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px); /* Start slightly below final position */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Smooth transition */
+}
+
+.animate-on-scroll.revealed {
+    opacity: 1;
+    transform: translateY(0); /* Move to final position */
+}
+
+/* Add a slight delay to grid items for staggered effect */
+.solution-item.animate-on-scroll,
+.feature-item.animate-on-scroll,
+.audience-item.animate-on-scroll,
+.step-item.animate-on-scroll,
+.testimonial-item.animate-on-scroll /* Apply animation to testimonial items */ {
+    transition-delay: var(--animation-delay, 0s);
 }
 
 /* --- Media Queries for Responsiveness --- */
@@ -586,54 +594,4 @@ footer {
         padding: 30px 0; /* Reduced footer padding */
         margin-top: 40px; /* Adjusted footer margin */
     }
-}
-
-#about {
-    background: url('images/grayscale_photography_of_ school_desk_and_board.jpg') no-repeat center center/cover; /* Background image for About section */
-    color: white; /* White text for better contrast on dark background */
-    position: relative; /* Needed for overlay */
-}
-
-/* Add a semi-transparent overlay to the about background */
-#about::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
-    z-index: 1;
-}
-
-#about .container {
-    position: relative;
-    z-index: 2; /* Ensure content is above overlay */
-}
-
-.feature-icon {
-    font-size: 48px; /* Size of the feature icon */
-    color: #009da4; /* Brand color for the icon */
-    margin-bottom: 15px; /* Space below the icon */
-    filter: brightness(1.5); /* Make icon brighter on dark background */
-}
-
-.testimonial-img {
-    width: 80px; /* Size of testimonial image */
-    height: 80px; /* Make it a circle */
-    border-radius: 50%; /* Rounded image */
-    margin-bottom: 15px; /* Space below image */
-    object-fit: cover; /* Ensure image covers the area without distortion */
-}
-
-.quote {
-    font-size: 18px;
-    font-style: italic; /* Italicize the quote */
-    margin-bottom: 15px;
-    color: #555; /* Slightly darker text for quote */
-}
-
-.testimonial-author {
-    font-weight: bold;
-    color: #333;
 } 

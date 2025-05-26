@@ -1,6 +1,6 @@
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/repositories/cybernetic
+    - export DEPLOYPATH=/home/cybernet/repositories/cybernetics
     - cp index.html $DEPLOYPATH
     - cp style.css $DEPLOYPATH
     - cp script.js $DEPLOYPATH

@@ -1,0 +1,639 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif; /* Use a common, clean font */
+    line-height: 1.6; /* Improved line height for readability */
+    color: #333; /* Default text color */
+    padding-top: 80px; /* Add padding to the top of the body equal to the header height */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.container {
+    width: 90%; /* Slightly wider container */
+    max-width: 1200px; /* Increased max width for larger screens */
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0 20px; /* Add some horizontal padding */
+}
+
+header {
+    background-color: #009da4; /* Using the hex color from hexcolor.txt */
+    color: white;
+    padding: 15px 0; /* Adjusted padding */
+    border-bottom: #00777c 3px solid;
+    position: fixed; /* Make the header sticky */
+    width: 100%; /* Ensure it spans the full width */
+    top: 0; /* Position it at the top */
+    left: 0; /* Align it to the left */
+    z-index: 1000; /* Ensure it stays on top of other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+header .container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between branding and nav */
+    align-items: center; /* Vertically align items */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+#branding {
+    display: flex; /* Flex for logo and h1 */
+    align-items: center;
+    margin-bottom: 5px; /* Add some space below branding on wrap */
+}
+
+#branding h1 {
+    margin: 0 0 0 10px; /* Space between logo and h1 */
+    font-size: 28px; /* Slightly larger h1 */
+    font-weight: bold; /* Make brand name bold */
+}
+
+#logo {
+    display: block;
+    /* Remove auto margins as flexbox handles alignment */
+    margin: 0;
+    max-width: 70px; /* Adjusted logo size */
+    height: auto;
+}
+
+/* Navigation */
+nav ul {
+    padding: 0;
+    list-style: none;
+    text-align: right; /* Align nav to the right */
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block; /* Use inline-block for better spacing control */
+    margin-left: 25px; /* Increased space between nav items */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px; /* Slightly larger nav font */
+    font-weight: bold;
+    padding-bottom: 5px; /* Space for border effect */
+    transition: all 0.3s ease; /* Smooth transition for hover */
+}
+
+nav ul li a:hover {
+    border-bottom: 2px solid white; /* Underline effect on hover */
+}
+
+/* Sections */
+#hero, #about, #problems-solutions, #features, #how-it-works, #audience, #contact, #cta {
+     padding: 80px 0; /* Increased padding for sections, include cta */
+}
+
+#hero {
+    background: url('images/wide_lighter_dark_mode_background.png') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    height: 600px; /* Increased height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Needed for overlay */
+}
+
+/* Add a semi-transparent overlay to the hero background */
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Dark overlay */
+    z-index: 1;
+}
+
+#hero .container {
+    position: relative;
+    z-index: 2; /* Ensure content is above overlay */
+}
+
+#hero h2 {
+    margin-top: 0;
+    font-size: 56px; /* Larger hero heading */
+    margin-bottom: 20px;
+    line-height: 1.1;
+    font-weight: bold; /* Make hero heading bold */
+}
+
+#hero p {
+    font-size: 24px; /* Larger hero paragraph */
+    margin-bottom: 40px;
+}
+
+.btn {
+    display: inline-block;
+    color: #fff;
+    background: #009da4; /* Use brand color for button */
+    padding: 14px 30px; /* Adjusted padding */
+    text-decoration: none;
+    margin-top: 15px; /* Adjusted margin */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease;
+    font-size: 18px; /* Larger button font */
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #00777c; /* Darker shade on hover */
+}
+
+/* Section Headings and Intros */
+#about h3, #problems-solutions h3, #features h3, #how-it-works h3, #audience h3, #contact h3, #cta h3, #testimonials h3 {
+    text-align: center;
+    color: #333; /* Default dark color for headings */
+    margin-bottom: 20px; /* Adjusted margin */
+    font-size: 36px; /* Larger heading size */
+    font-weight: bold; /* Make section headings bold */
+}
+
+#about h3, #problems-solutions h3, #features h3, #contact h3, #cta h3 {
+     color: white; /* White headings for sections with dark backgrounds */
+}
+
+.section-intro {
+    text-align: center;
+    font-size: 19px; /* Slightly larger intro font */
+    color: #555; /* Default dark color for intro text */
+    margin-bottom: 50px; /* Increased space below intro text */
+    max-width: 800px; /* Limit intro text width */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#about .section-intro, #problems-solutions .section-intro, #features .section-intro, #contact .section-intro, #cta .section-intro {
+    color: #eee; /* Lighter grey for intro text on dark backgrounds */
+}
+
+/* Background for alternate sections */
+#problems-solutions {
+    background: url('images/kids_inside_room_listening_to_maria_and nuns.jpg') no-repeat center center/cover; /* Background image */
+    color: white; /* White text for readability */
+    position: relative;
+}
+
+#problems-solutions::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Darker overlay for contrast */
+    z-index: 1;
+}
+
+#problems-solutions .container {
+    position: relative;
+    z-index: 2;
+}
+
+#contact {
+     background: url('images/dark_mode_background.png') no-repeat center center/cover; /* Background image */
+     color: white; /* White text for readability */
+     position: relative;
+}
+
+#contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Even darker overlay for contact info */
+    z-index: 1;
+}
+
+#contact .container {
+    position: relative;
+    z-index: 2;
+}
+
+#cta {
+    background: url('images/long_lighter_dark_mode_background.png') no-repeat center center/cover; /* Background image */
+    color: white; /* White text for readability */
+    text-align: center; /* Center content */
+    position: relative;
+}
+
+#cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    z-index: 1;
+}
+
+#cta .container {
+    position: relative;
+    z-index: 2;
+}
+
+#cta h3 {
+     color: white; /* White heading */
+}
+
+#cta .section-intro {
+     color: #eee; /* Lighter grey for intro text */
+}
+
+#features {
+    background: url('images/lighter_dark_mode_background.png') no-repeat center center/cover; /* Background image */
+    color: white; /* White text for readability */
+    position: relative;
+}
+
+#features::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    z-index: 1;
+}
+
+#features .container {
+    position: relative;
+    z-index: 2;
+}
+
+#features h3 {
+    color: white; /* White heading */
+}
+
+#features .section-intro {
+     color: #eee; /* Lighter grey for intro text */
+}
+
+/* Background for alternate sections */
+#audience, #how-it-works, #testimonials {
+    background: #f8f8f8; /* Apply light background to testimonial section */
+}
+
+.solution-grid, .feature-grid, .audience-grid, .how-it-works-steps, .testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Consistent grid structure */
+    gap: 40px; /* Increased gap */
+}
+
+.solution-item, .feature-item, .audience-item, .step-item, .testimonial-item {
+    background: #fff; /* Keep white background for grid items */
+    padding: 35px; /* Increased padding */
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* More pronounced shadow */
+    text-align: center; /* Center text in grid items */
+}
+
+.solution-item h4, .feature-item h4, .audience-item h4, .step-item h4 {
+    color: #009da4; /* Use the brand color for headings */
+    margin-top: 0;
+    font-size: 22px; /* Larger item heading font */
+    margin-bottom: 12px;
+}
+
+.solution-item h4 {
+    color: #333; /* Set dark color for headings in solution items for contrast */
+}
+
+.solution-item p, .feature-item p, .audience-item p, .step-item p {
+    font-size: 17px; /* Slightly larger paragraph font in items */
+    line-height: 1.7;
+    color: #555; /* Set dark color for paragraph text in grid items */
+}
+
+.audience-item img {
+    max-width: 100%; /* Make images responsive within the grid item */
+    height: auto;
+    border-radius: 8px; /* Rounded corners for images */
+    margin-bottom: 20px; /* Adjusted margin */
+}
+
+.step-icon {
+    font-size: 48px; /* Larger step icon size */
+    color: #009da4; /* Brand color for the icon */
+    margin-bottom: 20px; /* Increased space below the icon */
+    font-weight: normal; /* Font Awesome icons handle their own weight */
+}
+
+.item-img {
+    max-width: 100px; /* Adjust size as needed */
+    height: auto;
+    margin-bottom: 15px; /* Space below the image */
+    border-radius: 8px; /* Slightly rounded corners for item images */
+    display: block; /* Ensure it takes its own line */
+    margin-left: auto; /* Center the image if it's smaller than the container */
+    margin-right: auto;
+}
+
+/* Contact Section */
+#contact ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    color: white; /* Ensure list items are white */
+}
+
+#contact ul li {
+    margin-bottom: 18px; /* Increased space */
+    font-size: 19px; /* Slightly larger contact font */
+}
+
+#contact ul li a {
+    color: #ffffff; /* White color for contact links */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth transition for link color */
+}
+
+#contact ul li a:hover {
+    text-decoration: underline;
+    color: #eeeeee; /* Slightly lighter white on hover */
+}
+
+/* --- Animations --- */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px); /* Start slightly below final position */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Smooth transition */
+}
+
+.animate-on-scroll.revealed {
+    opacity: 1;
+    transform: translateY(0); /* Move to final position */
+}
+
+/* Add a slight delay to grid items for staggered effect */
+.solution-item.animate-on-scroll,
+.feature-item.animate-on-scroll,
+.audience-item.animate-on-scroll,
+.step-item.animate-on-scroll,
+.testimonial-item.animate-on-scroll /* Apply animation to testimonial items */ {
+    transition-delay: var(--animation-delay, 0s);
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 40px 0; /* Increased padding */
+    margin-top: 60px; /* Increased margin */
+    font-size: 15px; /* Slightly larger footer font */
+}
+
+/* Testimonial Section Specific Styles */
+.testimonial-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover;
+    border: 3px solid #009da4; /* Add a border with brand color */
+}
+
+.quote {
+    font-size: 18px;
+    font-style: italic;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.testimonial-author {
+    font-weight: bold;
+    color: #333;
+    font-size: 17px;
+}
+
+/* --- Media Queries for Responsiveness --- */
+
+/* Adjust layout for screens smaller than 768px (common tablet portrait) */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 0 15px;
+    }
+
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #branding {
+        margin-bottom: 15px;
+        justify-content: center;
+    }
+
+    #branding h1 {
+         font-size: 24px;
+         margin-left: 0;
+         margin-top: 10px;
+    }
+
+    #logo {
+        max-width: 60px;
+    }
+
+    nav ul {
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    #hero {
+        height: auto;
+        padding: 60px 0; /* Adjusted padding for mobile hero */
+    }
+
+    #hero h2 {
+        font-size: 40px; /* Adjusted hero heading size */
+    }
+
+    #hero p {
+        font-size: 20px; /* Adjusted hero paragraph size */
+    }
+
+    .btn {
+        padding: 12px 25px; /* Adjusted button padding */
+        font-size: 17px; /* Adjusted button font size */
+    }
+
+    #about h3, #problems-solutions h3, #features h3, #how-it-works h3, #audience h3, #contact h3, #cta h3, #testimonials h3 {
+        font-size: 30px; /* Adjusted section heading size */
+        margin-bottom: 10px;
+    }
+
+    .section-intro {
+        font-size: 17px;
+        margin-bottom: 25px;
+    }
+
+    .solution-grid, .feature-grid, .audience-grid, .how-it-works-steps, .testimonial-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjusted minmax */
+        gap: 25px; /* Adjusted gap */
+    }
+
+    .solution-item, .feature-item, .audience-item, .step-item, .testimonial-item {
+        padding: 30px; /* Adjusted padding */
+    }
+
+    .solution-item h4, .feature-item h4, .audience-item h4, .step-item h4 {
+        font-size: 20px;
+    }
+
+    .solution-item p, .feature-item p, .audience-item p, .step-item p {
+        font-size: 16px;
+    }
+
+    .audience-item img {
+        margin-bottom: 15px;
+    }
+
+    .step-icon {
+        font-size: 40px;
+        margin-bottom: 15px;
+    }
+
+    #contact ul li {
+        font-size: 17px;
+    }
+
+     .testimonial-img {
+        width: 70px;
+        height: 70px;
+     }
+
+     .quote {
+        font-size: 17px;
+     }
+
+     .testimonial-author {
+        font-size: 16px;
+     }
+}
+
+/* Further adjustments for very small screens (e.g., mobile portrait) */
+@media (max-width: 480px) {
+     #hero,
+     #about,
+     #problems-solutions,
+     #features,
+     #how-it-works,
+     #audience,
+     #contact,
+     #cta,
+     #testimonials {
+         padding: 50px 0; /* Reduced section padding */
+     }
+
+    #hero h2 {
+        font-size: 32px; /* Further reduced hero heading size */
+    }
+
+    #hero p {
+        font-size: 18px; /* Further reduced hero paragraph size */
+    }
+
+    #about h3, #problems-solutions h3, #features h3, #how-it-works h3, #audience h3, #contact h3, #cta h3, #testimonials h3 {
+        font-size: 26px; /* Further reduced section heading size */
+    }
+
+    .section-intro {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .solution-grid, .feature-grid, .audience-grid, .how-it-works-steps, .testimonial-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .solution-item, .feature-item, .audience-item, .step-item, .testimonial-item {
+         padding: 20px;
+    }
+
+     .solution-item h4, .feature-item h4, .audience-item h4, .step-item h4 {
+        font-size: 18px;
+    }
+
+    .solution-item p, .feature-item p, .audience-item p, .step-item p {
+        font-size: 15px;
+    }
+
+     .step-icon {
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+
+    #contact ul li {
+        font-size: 16px;
+    }
+
+    footer {
+        padding: 30px 0; /* Reduced footer padding */
+        margin-top: 40px; /* Adjusted footer margin */
+    }
+}
+
+#about {
+    background: url('images/grayscale_photography_of_ school_desk_and_board.jpg') no-repeat center center/cover; /* Background image for About section */
+    color: white; /* White text for better contrast on dark background */
+    position: relative; /* Needed for overlay */
+}
+
+/* Add a semi-transparent overlay to the about background */
+#about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 1;
+}
+
+#about .container {
+    position: relative;
+    z-index: 2; /* Ensure content is above overlay */
+}
+
+.feature-icon {
+    font-size: 48px; /* Size of the feature icon */
+    color: #009da4; /* Brand color for the icon */
+    margin-bottom: 15px; /* Space below the icon */
+    filter: brightness(1.5); /* Make icon brighter on dark background */
+}
+
+.testimonial-img {
+    width: 80px; /* Size of testimonial image */
+    height: 80px; /* Make it a circle */
+    border-radius: 50%; /* Rounded image */
+    margin-bottom: 15px; /* Space below image */
+    object-fit: cover; /* Ensure image covers the area without distortion */
+}
+
+.quote {
+    font-size: 18px;
+    font-style: italic; /* Italicize the quote */
+    margin-bottom: 15px;
+    color: #555; /* Slightly darker text for quote */
+}
+
+.testimonial-author {
+    font-weight: bold;
+    color: #333;
+} 
